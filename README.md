@@ -1,24 +1,75 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options        |
+| ------------------ | ------ | -------------- |
+| nickname           | string | null: false    |
+| encrypted_password | string | null: false    |
+| email              | string | null: false    |
+| name               | string | null: false    |
+| birth_date         | date   | null: false    |
+| admin              | boolean| default: false |
+### Association
+has_many :log_books
+has_many :comments
 
-* Ruby version
+## log_books テーブル
 
-* System dependencies
+| Column                    | Type     | Options     |
+| ------------------------- | -------  | ----------- |
+| place                     | string   | null: false |
+| temperature               | string   |             |
+| water_temperature         | string   |             |
+| transparency              | string   |             |
+| en_time                   | string   |             | 
+| ex_time                   | string   |             |
+| deep_avg                  | string   |             |
+| deep_max                  | string   |             |
+| date                      | date     |             |
+| weight                    | string   |             |
+| wear                      | text     |             |
+| free_space                | text     |             |
+| member                    | text     |             |
+| user                      |references| null: false |
+### Association
 
-* Configuration
+belongs_to :user
 
-* Database creation
+## map_place テーブル
 
-* Database initialization
 
-* How to run the test suite
+|Column	     |Type   |Options     |
+| -----------|------ |------------|
+|place_name  |string |null: false |
+|description |text   |null: false |
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+### Association
+has_one :spot
+
+## spot テーブル
+| Column	  | Type	     | Options                        |
+|-----------|------------|--------------------------------|
+| address	  | string	   |                                |
+| latitude  |	float	     | null: false                    |
+| longitude	| float	     | null: false                    |
+| map_place | references |foreign_key: true, null: false  |
+
+
+### Association
+has_many :comments
+belongs_to :map_place
+
+## comments テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | text       |                                |
+| user    | references | null: false, foreign_key: true |
+| spot    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :spot
