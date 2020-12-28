@@ -43,24 +43,13 @@ belongs_to :user
 | -----------|------ |------------|
 |place_name  |string |null: false |
 |description |text   |null: false |
-
-
-
-### Association
-has_one :spot
-
-## spot テーブル
-| Column	  | Type	     | Options                        |
-|-----------|------------|--------------------------------|
-| address	  | string	   |                                |
 | latitude  |	float	     | null: false                    |
 | longitude	| float	     | null: false                    |
-| map_place | references |foreign_key: true, null: false  |
 
 
 ### Association
 has_many :comments
-belongs_to :map_place
+
 
 ## comments テーブル
 
@@ -68,8 +57,9 @@ belongs_to :map_place
 | ------- | ---------- | ------------------------------ |
 | content | text       |                                |
 | user    | references | null: false, foreign_key: true |
-| spot    | references | null: false, foreign_key: true |
+| map_place    | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :spot
+- belongs_to :map_place
+- belongs_to  :user
