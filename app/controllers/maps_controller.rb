@@ -1,4 +1,5 @@
 class MapsController < ApplicationController
+<<<<<<< Updated upstream
   def index
     @map_place = MapPlace.new
     @map_places = MapPlace.all
@@ -19,4 +20,6 @@ class MapsController < ApplicationController
   def map_place_params
     params.require(:map_place).permit(:place_name, :description, :latitude, :longitude)
   end
+=======
+>>>>>>> Stashed changes
 end
