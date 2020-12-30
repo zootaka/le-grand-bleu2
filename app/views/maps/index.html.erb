@@ -17,8 +17,13 @@
             <li class="nav-item "><a class="nav-link p-4" href="#">リンク2</a></li>
             <li class="nav-item "><a class="nav-link p-4" href="#">リンク３</a></li>
             <li class="nav-item "><a class="nav-link p-4" href="#">リンク４</a></li>
-            <li class="nav-item ml-lg-auto"><a class="nav-link p-4" href="#">リンク５</a></li>
-            <li class="nav-item "><a class="nav-link p-4 href=" href="#">マイページ</a></li>
+            <% if user_signed_in? %>
+              <li class="nav-item ml-lg-auto"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-link p-4" %>
+              <li class="nav-item "><%= link_to current_user.nickname,  "#", class: "nav-link p-4" %>
+            <% else %>
+            <li class="nav-item ml-lg-auto"><%= link_to 'ログイン', new_user_session_path, class: "nav-link p-4" %></li>
+            <li class="nav-item "><%= link_to '新規登録', new_user_registration_path, class: "nav-link p-4" %></li>
+            <% end %>
         </ul>
       </div>
     </div>
@@ -29,7 +34,7 @@
   <%= render "googlemap"%>
 </div>
 <div class="">
-  <%# <%= will_paginate %> %>
+  <%= will_paginate @map_places %>
     <ul class="map_places">
       <% @map_places.each do |map_place| %>
         <li class='list'>
@@ -37,7 +42,7 @@
         </li>
       <% end %>
     </ul>
-  <%# <%= will_paginate %> %>
+  <%= will_paginate @map_places %>
 </div>
 <%= form_with(model: @map_place, url: maps_path, local: true) do |form| %>
       <h3 class="map-title">掲示板を作成</h3>
