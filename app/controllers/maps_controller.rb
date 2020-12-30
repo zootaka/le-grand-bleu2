@@ -2,10 +2,9 @@ class MapsController < ApplicationController
 
   def index
     @map_place = MapPlace.new
-    @map_places = MapPlace.all
-    gon.map_places = MapPlace.paginate(page: params[:page], per_page: 30)
+    @map_places = MapPlace.paginate(page: params[:page], per_page: 30)
+    gon.map_places = MapPlace.all
   end
-
   def create
     @map_place = MapPlace.new(map_place_params)
     if @map_place.save
