@@ -14,7 +14,7 @@
  @import 'bootstrap';
 
  #map {
-  width: 80%;
+  width: 100%;
   height: 400px;
 }
 header{
@@ -23,20 +23,19 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(
 }
 
 .nav-link{
-  color: aliceblue;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   line-height: 60%;
   
   position: relative;
-  text-transform: uppercase;
   border: 1px solid transparent;
   outline: 1px solid;
   outline-color: rgba(255, 255, 255, 0.5);
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+  color: #FFF;
 }
 .nav-link:hover{
   text-decoration: none;
@@ -46,4 +45,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(
   outline-color: transparent;
   outline-offset: 12px;
   text-shadow: 2px 2px 3px #000;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: antiquewhite;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color:white;
 }
