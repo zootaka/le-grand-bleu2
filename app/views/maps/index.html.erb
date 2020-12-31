@@ -19,7 +19,7 @@
             <li class="nav-item "><a class="nav-link p-4" href="#">リンク４</a></li>
             <% if user_signed_in? %>
               <li class="nav-item ml-lg-auto"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-link p-4" %>
-              <li class="nav-item "><%= link_to current_user.nickname,  "#", class: "nav-link p-4" %>
+              <li class="nav-item "><%= link_to current_user.nickname,  users_path(current_user), class: "nav-link p-4" %>
             <% else %>
             <li class="nav-item ml-lg-auto"><%= link_to 'ログイン', new_user_session_path, class: "nav-link p-4" %></li>
             <li class="nav-item "><%= link_to '新規登録', new_user_registration_path, class: "nav-link p-4" %></li>
