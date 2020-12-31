@@ -1,18 +1,18 @@
 class BoardsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
-  before_action :set_spot, only: [:index, :create]
+  before_action :set_map_place, only: [:index, :create]
 
   def index
     @comment = Comment.new
-    @comments = @spot.comments.all
+    @comments = @map_place.comments.all
   end
 
   def create
-    @comment = @spot.comments.new(comment_params)
+    @comment = @map_place.comments.new(comment_params)
     if @comment.save
-      redirect_to map_boards_path(@spot)
+      redirect_to map_boards_path(@map_place)
     else
-      @comments = @spot.comments.all
+      @comments = @map_place.comments.all
       render :index
     end
   end
@@ -29,11 +29,11 @@ class BoardsController < ApplicationController
 
   private
 
-  def set_spot
-    @spot = Spot.find(params[:map_id])
+  def set_map_place
+    @map_place = MapPlace.find(params[:map_id])
   end
 
   def comment_params
-    params.require(:comment).permit(:content, :image).merge(user_id: current_user.id, spot_id: params[:map_id])
+    params.require(:comment).permit(:content, :image).merge(user_id: current_user.id, map_place_id: params[:map_id])
   end
 end

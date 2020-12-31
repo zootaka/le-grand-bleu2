@@ -6,7 +6,7 @@
     <ul class="map_places">
       <% @map_places.each do |map_place| %>
         <li class='list'>
-          <%= link_to map_place.place_name, "#" %>
+          <%= link_to map_place.place_name, "/maps/#{map_place.id}/boards" %>
         </li>
       <% end %>
     </ul>
