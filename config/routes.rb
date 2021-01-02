@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :boards, only: [:index, :create, :destroy]
   end
 
-  resources :users, only: [:index, :edit, :update, :destroy]
+  resources :users, only: [:index, :edit, :update, :destroy]do
+    resources :log_books, only: [:create, :edit, :update, :show, :new, :destroy]
+  end
 end

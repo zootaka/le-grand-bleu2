@@ -1,0 +1,93 @@
+ログブック作成
+
+<div class="box26">
+<span class="box-title">log bock</span>
+<%= form_with(model: @log_book, url: user_log_books_path,method: :POST ,local: true) do |form| %>
+<%# <%= render 'shared/error_messages', model: form.object %>
+<div class="place_name">
+  <div class="field">
+    <%= form.text_field :place, id: "place_name", class: 'spot_text', placeholder: "必須"%>
+    <%= form.label :place, "場所名", class: 'spot_name' %>
+    <span class="focus_line"></span>
+  </div>
+</div>
+<div class="top-line">
+  <div class="weight">
+    <div class="field">
+      <%= form.text_field :weight, placeholder: "", id: "place_name", class: 'spot_text' %><p class="unit">kg</p>
+      <%= form.label :weight, "重り", class: 'spot__title' %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+  <div class="transparency">
+    <div class="field">
+      <%= form.text_field :transparency ,class: 'spot_text', placeholder: ""%><p class="unit">m</p>
+      <%= form.label :transparency, "透明度" %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+</div>
+  <div class="en-ex-time">
+    <div class="field">
+      <%= form.text_field :en_time, placeholder: "", id: "place_name", class: 'spot_text' %>
+      <%= form.label :en_time, "始めた時間", class: 'spot__title' %>
+      <span class="focus_line"></span>
+    </div>
+    <div class="field">
+      <%= form.text_field :ex_time, placeholder: "",class: 'spot_text' %>
+      <%= form.label :ex_time, "出た時間" %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+  <div class="temp">
+    <div class="field">
+      <%= form.text_field :temperature, placeholder: "",class: 'spot_text' %>
+      <%= form.label :temperature, "気温",class: 'temperature' %>
+      <span class="focus_line"></span>
+    </div>
+    <div class="field">
+      <%= form.text_field :water_temperature,class: 'spot_text', placeholder: "" %>
+      <%= form.label :water_temperature, "水温" %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+  <div class="deep-avg-max">
+    <div class="field">
+      <%= form.text_field :deep_avg,class: 'spot_text', placeholder: "" %>
+      <%= form.label :deep_avg, "平均潜水時間" %>
+      <span class="focus_line"></span>
+    </div>
+    <div class="field">
+      <%= form.text_field :deep_max,class: 'spot_text', placeholder: "" %>
+      <%= form.label :deep_max, "最大深度" %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+<div class="third-line">
+  <div class="wear">
+    <div class="field">
+      <%= form.text_field :wear, placeholder: "", class: 'spot_text' %>
+      <%= form.label :wear, "服装" %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+  <div class="member">
+    <div class="field">
+      <%= form.text_field :member,class: 'spot_text' %>
+      <%= form.label :member, "メンバー" %>
+      <span class="focus_line"></span>
+    </div>
+  </div>
+</div>
+<div class="free">
+  <div class="field2">
+    <%= form.text_area :free_space, class: 'spot_text2',placeholder: "free space" %>
+    <%= form.label :free_space, "自由にかく" %>
+    
+  </div>
+</div>
+<div class="actions">
+  <%= form.submit "作成" %>
+</div>
+<% end %>
+</div>
