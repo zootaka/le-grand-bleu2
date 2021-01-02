@@ -58,7 +58,7 @@
 　
 ## 💬 Usage
 
-  `$ git clone https://github.com/aocattleya/Ramen-Timer.git`  
+  `$ git clone https://github.com/zootaka/le-grand-bleu2.git`  
 　　
 
 # テーブル設計
