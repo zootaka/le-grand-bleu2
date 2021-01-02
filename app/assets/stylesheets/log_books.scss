@@ -1,0 +1,144 @@
+// Place all the styles related to the log_books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.my-top{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  align-items: center;
+}
+.log-book-path{
+  color: aliceblue;
+  text-decoration: none;
+  padding: 5px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 45px;
+  position: relative;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+.log-book-path:hover {
+  border-color: #FFF;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: transparent;
+  outline-offset: 12px;
+  text-shadow: 2px 2px 3px #000;
+}
+
+.box26 {
+  position: relative;
+  margin: 2em 0;
+  height: 200vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 6px #95ccff;
+  border-radius: 100px;
+  padding: 50px 50px;
+}
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 30%;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 50px;
+  background: #FFF;
+  color: #95ccff;
+  font-weight: bold;
+}
+.field {
+	position: relative;
+	width: 40%;
+	margin: 40px 3%;
+}
+.field input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 1px;
+  padding-left: 4em;
+  
+}
+.field input[type='text']:focus {
+	outline: none;
+}
+.spot_text {
+	padding: 4px 0;
+	border: 0;
+	border-bottom: 1px solid #1b2538;
+  background-color: transparent;
+  text-align: center;
+}
+.spot_text ~ .focus_line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: blue;
+}
+.spot_text:focus ~ .focus_line,
+.field.ef ~ .focus_line {
+	width: 100%;
+	transition: 0.4s;
+}
+.spot_text ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 4px;
+	left: 0;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+.spot_text:focus ~ label, .field.ef ~ label {
+	font-size: 12px;
+	top: -16px;
+	transition: 0.3s;
+	color: cornflowerblue;
+}
+.place_name{
+  margin-left: 35%;
+  margin-right: auto;
+}
+.top-line{
+  display: flex;
+  justify-content: space-around;
+}
+
+.unit{float: right;}
+
+.en-ex-time{
+  display: flex;
+}
+.temp{
+  display: flex;
+}
+.deep-avg-max{
+  display: flex;
+}
+
+textarea {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: darken(#f9f9f9, 10%);
+  color: darken(#f9f9f9, 50%);
+  height: 10rem;
+}

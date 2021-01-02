@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    # @log_books = LogBook.includes(:user)
+    @log_books = LogBook.includes(:user)
     @user = User.find(current_user.id)
   end
 
