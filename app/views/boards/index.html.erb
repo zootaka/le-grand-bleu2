@@ -1,0 +1,17 @@
+<h1 class=""><%= @map_place.place_name %></h1>
+<div class="messages">
+  <%= render partial: 'shared/comment', collection: @comments %>
+</div>
+<footer>
+<%= form_with model: [@map_place, @comment],url: map_boards_path,method: :POST, class: 'form', local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :content, class: 'form-message', placeholder: '日付け、魚種、透明度etc' %>
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+  <div id="image-list"></div>
+<% end %>
+</footer>

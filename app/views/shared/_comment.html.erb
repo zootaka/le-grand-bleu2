@@ -1,0 +1,22 @@
+<div class="message">
+  <div class="upper-message">
+    <div class="message-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= comment.user.nickname %>
+    </div>
+    <div class="message-date">
+      <!-- 投稿した時刻を出力する -->
+      <%= l comment.created_at %>
+    </div>
+  </div>
+  <div class="lower-message">
+    <div class="message-content">
+      <!-- 投稿したメッセージ内容を記述する -->
+      <%= comment.content %>
+    </div>
+    <%= image_tag comment.image.variant(resize: '300x300'), class: 'message-image' if comment.image.attached? %>
+    <% if current_user.id == comment.user_id %>
+      <%= link_to '削除',  map_board_path(params[:map_id],comment.id), method: :delete, class: "log-book-path" ,id: "aaa"%>
+    <% end %>
+  </div>
+</div>

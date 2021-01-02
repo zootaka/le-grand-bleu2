@@ -4,4 +4,6 @@ class MapPlace < ApplicationRecord
     validates :latitude
     validates :longitude
   end
+
+  has_many :comments
 end
