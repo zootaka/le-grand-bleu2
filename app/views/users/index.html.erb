@@ -1,70 +1,53 @@
 <div class="container emp-profile">
-  <form method="post">
-      <div class="row">
-          <div class="col-md-4">
-              <div class="profile-img">
-                  <div class="my-image">
-                    <% if @user.avatar.attached? %>
-                      <%=image_tag @user.avatar.variant(resize: '280x280') %>
-                    <% else %>
-                      <%= image_tag "image1.jpeg", size: '280x280',class: "dolfin" %>
-                    <% end %>
-                  </div>
-                  <div class="file btn btn-lg btn-primary">
-                      Change Photo
-                      <input type="file" name="file"/>
-                  </div>
+  <div class="row">
+      <div class="col-md-4">
+          <div class="profile-img">
+              <div class="my-image">
+                <% if @user.avatar.attached? %>
+                  <%=image_tag @user.avatar.variant(resize: '280x280') %>
+                <% else %>
+                  <%= image_tag "image1.jpeg", size: '280x280',class: "dolfin" %>
+                <% end %>
+              </div>
+              <div class="file btn btn-lg btn-primary">
+                  画像を変更する
+                  <%= form_with model: @user,url: user_path(@user),method: :PUT, class: 'form-edit', local: true do |f| %>
+                  <%= f.file_field :avatar %>
               </div>
           </div>
-          <div class="col-md-6">
-              <div class="profile-head">
-                          <h5><%= @user.nickname %></h5>
-                          <h6><%= @user.self_introduction %></h6>
-              </div>
-          </div>
-          <div class="col-md-2">
-            <%= link_to "マイページ編集",  edit_user_path(current_user.id), class: "profile-edit-btn" %>
-              <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                  <%= f.submit '画像を決定する', class: 'btn btn-primary ml-5' %>
+                  <% end %>
+      </div>
+      <div class="col-md-6">
+          <div class="profile-head">
+                      <h5><%= @user.nickname %></h5>
+                      <h6><%= @user.self_introduction %></h6>
           </div>
       </div>
-  </form>           
-</div>
-<div class="col-xs-12 divider text-center">
-    <div class="col-xs-12 col-sm-4 emphasis">
-        <h2><strong> 20,7K </strong></h2>                    
-        <p><small>Followers</small></p>
-        <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
-    </div>
-    <div class="col-xs-12 col-sm-4 emphasis">
+      <div class="col-md-2">
+        <%= link_to "マイページ編集",  edit_user_path(current_user.id), class: "btn btn-outline-primary" %>
+      </div>
+  </div>
+      <div class=" center col-xs-12 divider text-center row justify-content-center">
+        <div class="col-xs-12 col-sm-4 emphasis">
+          <h2><strong> 20,7K </strong></h2>                    
+          <p><small>Following</small></p>
+          <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follower </button>
+      </div>
+      <div class="col-xs-12 col-sm-4 emphasis">
         <h2><strong>245</strong></h2>                    
-        <p><small>Following</small></p>
-        <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
-    </div>
-    <div class="col-xs-12 col-sm-4 emphasis">
-        <h2><strong>43</strong></h2>                    
-        <p><small>Snippets</small></p>
-        <div class="btn-group dropup btn-block">
-          <button type="button" class="btn btn-primary"><span class="fa fa-gear"></span> Options </button>
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu text-left" role="menu">
-            <li><a href="#"><span class="fa fa-envelope pull-right"></span> Send an email </a></li>
-            <li><a href="#"><span class="fa fa-list pull-right"></span> Add or remove from a list  </a></li>
-            <li class="divider"></li>
-            <li><a href="#"><span class="fa fa-warning pull-right"></span>Report this user for spam</a></li>
-            <li class="divider"></li>
-            <li><a href="#" class="btn disabled" role="button"> Unfollow </a></li>
-          </ul>
-        </div>
-    </div>
+        <p><small>Followed</small></p>
+        <button class="btn btn-info btn-block"><span class="fa fa-user"></span> Followed </button>
+      </div>
 </div>
-<div class="log-list">
-  <% @log_books.each do |book| %>
+<h3 class="center mt-5">ログブック一覧</h3>
+  <%= will_paginate @log_books  %>
+  <div class="log-list">
+    <% @log_books.each do |book| %>
       <li class='list'>
         <%= l book.created_at, format: :short %>
         <%= link_to book.place, "/users/#{current_user.id}/log_books/#{book.id}" %>
       </li>
     <% end %>
-</div>
+  </div>
+  <%= will_paginate @log_books %>
