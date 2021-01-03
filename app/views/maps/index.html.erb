@@ -1,7 +1,8 @@
 <div class="container">
   <%= render "googlemap"%>
 </div>
-<div class="">
+<div class="container mt-4 bg-white text-dark box1" style="padding:10px;">
+<span class="box-title">掲示板一覧</span>
   <%= will_paginate @map_places %>
     <ul class="map_places">
       <% @map_places.each do |map_place| %>
