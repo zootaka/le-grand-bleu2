@@ -5,8 +5,20 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true
+  validate :avatar_content_type, if: :was_attached?
 
   has_one_attached :avatar
   has_many :log_books
   has_many :comments
+
+  def avatar_content_type
+    if !avatar.content_type.in?(%('image/jpeg image/png'))
+      errors.add(:avatar, 'にはjpegまたはpngファイルを添付してください')
+    end
+  end
+  
+
+  def was_attached?
+    avatar.attached?
+  end
 end
