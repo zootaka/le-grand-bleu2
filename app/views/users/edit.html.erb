@@ -23,9 +23,9 @@
 
       <%= f.label :self_introduction %>
       <%= f.text_area :self_introduction, class: 'form-control' %>
-
-      <span class="avatar-file">画像</span>
-      <%= f.file_field :avatar %>
+      
+      <p class="avatar-file">プロフィール画像の変更</p>
+      <%= f.file_field :avatar, class: 'btn btn-secondary'%>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
