@@ -13,6 +13,7 @@
     </ul>
   <%= will_paginate @map_places %>
 </div>
+<% if !current_user.nil? && current_user.admin? %>
 <%= form_with(model: @map_place, url: maps_path, local: true) do |form| %>
       <h3 class="map-title">掲示板を作成</h3>
       <div class="field3">
@@ -31,3 +32,4 @@
         <%= form.submit "作成" %>
       </div>
     <% end %>
+<% end %>

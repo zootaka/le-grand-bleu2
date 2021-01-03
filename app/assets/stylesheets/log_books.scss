@@ -1,6 +1,7 @@
 // Place all the styles related to the log_books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .my-top{
   width: 100%;
   display: flex;
@@ -45,7 +46,7 @@
   border-radius: 100px;
   padding: 50px 50px;
 }
-.box26 .box-title {
+.box26 .box-title2 {
   position: absolute;
   display: inline-block;
   top: -30px;
@@ -53,8 +54,8 @@
   padding: 0 9px;
   line-height: 1;
   font-size: 50px;
-  background: #FFF;
-  color: #95ccff;
+  // background: #FFF;
+  color: blue;
   font-weight: bold;
 }
 .field {
@@ -102,13 +103,13 @@
 	width: 100%;
 	transition: 0.3s;
 	letter-spacing: 0.5px;
-	color: #aaaaaa;
+	color: black;
 }
 .spot_text:focus ~ label, .field.ef ~ label {
 	font-size: 12px;
 	top: -16px;
 	transition: 0.3s;
-	color: cornflowerblue;
+	color: gray;
 }
 .place_name{
   margin-left: 35%;
