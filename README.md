@@ -5,7 +5,7 @@
 ## :art: logo
 
 <p align="center">
-  <img src="https://gyazo.com/4e7d082b5f8e851a204cd8e8628eb661" width=70%>  
+  <img src="/app/assets/images/image0.png" width=70%>  
 </p>
 
 ## 簡単な説明
