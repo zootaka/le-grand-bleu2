@@ -13,7 +13,7 @@
       </button>
       <div class="navbar-collapse collapse pb-md-0" id="navbarContent">
         <ul class="w-100 navbar-nav pb-3 pb-lg-0 d-flex align-items-center mt-2">
-            <li class="nav-item "><a class="nav-link p-4" href="#">使い方</a></li>
+            <li class="nav-item "><%= link_to "使い方", explanation_path , class: "nav-link p-4"%></li>
             <li class="nav-item "><%= link_to "マップページ", maps_path , class: "nav-link p-4"%></li>
             <% if user_signed_in? %>
               <li class="nav-item "><%= link_to "ログブック一覧", "#", class: "nav-link p-4" %></li>
