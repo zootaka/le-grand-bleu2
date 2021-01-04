@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "maps#index"
+  get  '/explanation',    to: 'static_pages#explanation'
 
   resources :maps, only: [:index, :create] do
     resources :boards, only: [:index, :create, :destroy]
