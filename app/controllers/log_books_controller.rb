@@ -2,6 +2,10 @@ class LogBooksController < ApplicationController
   before_action :move_to_map, except: [:show]
   before_action :authenticate_user!
   before_action :set_log_book, only: [:show, :edit, :update, :destroy]
+  
+  def index
+    @log_books = LogBook.all
+  end
 
   def new
     @log_book = LogBook.new

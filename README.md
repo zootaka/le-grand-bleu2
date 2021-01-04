@@ -1,11 +1,11 @@
-## :tropical_fish:　アプリの名前
+## :tropical_fish: アプリの名前
 
  le grand bleu
 
 ## :art: logo
 
 <p align="center">
-  <img src="https://〜.png" width=70%>  
+  <img src="https://gyazo.com/4e7d082b5f8e851a204cd8e8628eb661" width=70%>  
 </p>
 
 ## 簡単な説明
@@ -44,13 +44,12 @@
 </p> 
 
  
-## 必要要件
+## これから実装していきたい機能
  
-- 
-- 
-- 
-- 
-
+- 任意でみんなのログブックをみれる機能の実装
+- メッセージ機能の実装
+- フォロー機能の実装
+- ダイビングショップと一般ユーザーを分ける
 
 ## 🌐 App URL
 
@@ -102,12 +101,12 @@ belongs_to :user
 ## map_place テーブル
 
 
-|Column	     |Type   |Options     |
-| -----------|------ |------------|
-|place_name  |string |null: false |
-|description |text   |null: false |
-| latitude  |	float	     | null: false                    |
-| longitude	| float	     | null: false                    |
+|Column	     |Type   |Options          |
+| -----------|------ |-----------------|
+|place_name  |string |null: false      |
+|description |text   |null: false      |
+| latitude   |float	 | null: false     |
+| longitude	 |float	 | null: false     |
 
 
 ### Association
@@ -116,12 +115,11 @@ has_many :comments
 
 ## comments テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | text       |                                |
-| user    | references | null: false, foreign_key: true |
-<<<<<<< Updated upstream
-| map_place    | references | null: false, foreign_key: true |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| content  | text       |                                |
+| user     | references | null: false, foreign_key: true |
+| map_place| references | null: false, foreign_key: true |
 
 ### Association
 
