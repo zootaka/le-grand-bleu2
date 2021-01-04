@@ -1,6 +1,6 @@
 ## :tropical_fish: アプリの名前
 
- le grand bleu
+# le grand bleu
 
 ## :art: logo
 
@@ -16,32 +16,18 @@
 ## 使い方
  
 1. 新規登録画面からユーザー登録をしログブックを作成する
-2. googlemapもしくは下の掲示板一覧から掲示板に遷移してダイビングスポットの現状を確認する
+2. googlemapもしくは下の掲示板一覧から掲示板に遷移してダイビングスポットの現状を投稿、確認する
 3. 
  
-
-***デモ***
  
 
 ## 📦 機能
 
 <h3 align="center"> 機能1 ユーザー管理機能 -</h3>
 
-<p align="center">
-  <img src="https://〜.jpg" width=40%>
-</p> 
+<h3 align="center"> 機能2 ログブックの作成、保存 </h3> 
 
-<h3 align="center">　機能2 ログブックの作成、保存 </h3>
-
-<p align="center">
-  <img src="https://〜.jpg" width=40%>
-</p> 
-
-<h3 align="center">- 機能3 googlemapを使用しての掲示板作成、投稿 -</h3>
-
-<p align="center">
-  <img src="https://〜.jpg" width=40%>
-</p> 
+<h3 align="center"> 機能3 googlemapを使用しての掲示板作成、投稿 -</h3>
 
  
 ## これから実装していきたい機能
@@ -54,11 +40,11 @@
 ## 🌐 App URL
 
 ### **https://.com**  
-　
+
 ## 💬 Usage
 
   `$ git clone https://github.com/zootaka/le-grand-bleu2.git`  
-　　
+
 
 # テーブル設計
 

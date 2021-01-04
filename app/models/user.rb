@@ -12,11 +12,8 @@ class User < ApplicationRecord
   has_many :comments
 
   def avatar_content_type
-    if !avatar.content_type.in?(%('image/jpeg image/png'))
-      errors.add(:avatar, 'にはjpegまたはpngファイルを添付してください')
-    end
+    errors.add(:avatar, 'にはjpegまたはpngファイルを添付してください') unless avatar.content_type.in?(%('image/jpeg image/png'))
   end
-  
 
   def was_attached?
     avatar.attached?
