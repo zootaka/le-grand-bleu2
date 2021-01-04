@@ -15,7 +15,7 @@
  
 ## 使い方
  
-### **https://.com**   
+### **https://le-grand-bleu2.herokuapp.com/explanation**   
  
  
 
@@ -37,7 +37,7 @@
 
 ## 🌐 App URL
 
-### **https://.com**   
+### **https://le-grand-bleu2.herokuapp.com**   
 
 
 # テーブル設計
