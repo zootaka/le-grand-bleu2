@@ -4,9 +4,9 @@
           <div class="profile-img">
               <div class="my-image">
                 <% if @user.avatar.attached? %>
-                  <%=image_tag @user.avatar.variant(resize: '280x280') %>
+                  <%= image_tag @user.avatar.variant(resize: '280x280') %>
                 <% else %>
-                  <%= image_tag "image1.jpeg", size: '280x280',class: "dolfin" %>
+                  <%= image_tag asset_path("image1.jpeg"), size: '280x280',class: "dolfin" %>
                 <% end %>
               </div>
               <div class="file btn btn-lg btn-primary">

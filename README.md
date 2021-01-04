@@ -15,7 +15,7 @@
  
 ## 使い方
  
-http
+### **https://.com**   
  
  
 
@@ -37,11 +37,7 @@ http
 
 ## 🌐 App URL
 
-### **https://.com**  
-
-## 💬 Usage
-
-  `$ git clone https://github.com/zootaka/le-grand-bleu2.git`  
+### **https://.com**   
 
 
 # テーブル設計
