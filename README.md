@@ -5,7 +5,7 @@
 ## :art: logo
 
 <p align="center">
-  <img src="/app/assets/images/image0.png" width=70%>  
+  <img src="/app/assets/images/image0.png" width=70% height=50% >  
 </p>
 
 ## 簡単な説明
@@ -15,9 +15,7 @@
  
 ## 使い方
  
-1. 新規登録画面からユーザー登録をしログブックを作成する
-2. googlemapもしくは下の掲示板一覧から掲示板に遷移してダイビングスポットの現状を投稿、確認する
-3. 
+http
  
  
 
