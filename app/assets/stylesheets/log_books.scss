@@ -54,7 +54,7 @@
   padding: 0 9px;
   line-height: 1;
   font-size: 50px;
-  // background: #FFF;
+  background: #FFF;
   color: blue;
   font-weight: bold;
 }
@@ -142,4 +142,7 @@ textarea {
   background: darken(#f9f9f9, 10%);
   color: darken(#f9f9f9, 50%);
   height: 10rem;
+}
+.box100{
+  background-color: white;
 }

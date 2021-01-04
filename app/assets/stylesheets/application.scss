@@ -240,11 +240,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(
   display: contents;
 }
 footer{
-  /*footerの装飾*/
   width: 100%;
   text-align: center;
-  position: absolute;/*←絶対位置*/
-    bottom: 0; /*下に固定*/
+  position: absolute;
+  bottom: 0;
 }
 #aaa{
   color: skyblue;
