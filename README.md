@@ -5,17 +5,19 @@
 ## :art: logo
 
 <p align="center">
-  <img src="/app/assets/images/image0.png" width=70% height=50% >  
+  <img src="/app/assets/images/image0.png" height=100px >  
 </p>
 
 ## 簡単な説明
  
 ダイビングでのログブックの管理
-ダイビングスポットの現状の把握
+ダイビングスポットの海の透明度や観察できる生物の現状の把握
  
 ## 使い方
  
-### **https://le-grand-bleu2.herokuapp.com/explanation**   
+### **https://le-grand-bleu2.herokuapp.com/explanation**
+### テストID：管理者
+### テストPASS：11111111
  
  
 
@@ -37,7 +39,14 @@
 
 ## 🌐 App URL
 
-### **https://le-grand-bleu2.herokuapp.com**   
+### **https://le-grand-bleu2.herokuapp.com** 
+テストID：管理者
+テストPASS：11111111
+
+## 苦労した点
+
+マップでの掲示板投稿機能を作成するときに当初は住所を入力することで緯度経度へ変換し掲示板を作成する機能を作りました。
+完成した時に海に住所はないことに気づき緯度経度を直接入力して掲示板を作成する機能へマイナーチェンジしましたorz
 
 
 # テーブル設計
