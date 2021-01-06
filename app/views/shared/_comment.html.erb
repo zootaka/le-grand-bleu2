@@ -15,7 +15,7 @@
       <%= comment.content %>
     </div>
     <%= image_tag comment.image.variant(resize: '300x300'), class: 'message-image' if comment.image.attached? %>
-    <% if current_user.id == comment.user_id %>
+    <% if user_signed_in? && (current_user.id == comment.user_id) %>
       <%= link_to '削除',  map_board_path(params[:map_id],comment.id), method: :delete, class: "log-book-path" ,id: "aaa"%>
     <% end %>
   </div>
