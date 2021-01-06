@@ -54,3 +54,15 @@
     font-size: 15px;
   }
 }
+
+.top-image{
+  height: calc(100vh - 80px);
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 110%;
+}
+
+.top-right{
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  padding-top: 50px;
+}
