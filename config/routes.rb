@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "maps#index"
+  root to: 'static_pages#top'
   get  '/explanation',    to: 'static_pages#explanation'
 
   resources :maps, only: [:index, :create] do
