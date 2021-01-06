@@ -5,7 +5,7 @@
 ## :art: logo
 
 <p align="center">
-  <img src="/app/assets/images/image0.png" height=100px >  
+  <img src="/app/assets/images/image0.png" height=400px >  
 </p>
 
 ## 簡単な説明
