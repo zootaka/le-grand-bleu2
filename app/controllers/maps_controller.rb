@@ -8,9 +8,9 @@ class MapsController < ApplicationController
   def create
     @map_place = MapPlace.new(map_place_params)
     if @map_place.save
-      redirect_to root_path
+      redirect_to maps_path
     else
-      redirect_to root_path
+      redirect_to maps_path
     end
   end
 
