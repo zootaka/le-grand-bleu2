@@ -55,7 +55,8 @@ https://le-grand-bleu2.herokuapp.com/explanation
 - メッセージ機能の実装
 - フォロー機能の実装
 - ダイビングショップと一般ユーザーを分ける
-
+- circleCIでテストコードを自動で走らせる
+- reactの導入
 
 ## 苦労した点
 
@@ -63,7 +64,7 @@ https://le-grand-bleu2.herokuapp.com/explanation
 完成した時に海に住所はないことに気づき緯度経度を直接入力して掲示板を作成する機能へマイナーチェンジしましたorz
 
 ## 使用技術
-ruby,javascript,RubyonRails,bootstrap,AWS,capistrano,docker,rspec
+ruby,javascript,RubyonRails,bootstrap,AWS,capistrano,rspec
 
 # テーブル設計
 
